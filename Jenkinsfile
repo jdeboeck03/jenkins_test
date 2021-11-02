@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pyton --version'
+                sh 'python --version'
             }
         }
     }
@@ -26,7 +26,7 @@ pipeline {
         }
         changed {
             echo 'This will only tun if the state of the Pipeline has changed'
-            echo 'For example, if te Pipeline wwas previously failing but is now successfull'
+            echo 'For example, if te Pipeline was previously failing but is now successfull'
         }
     }
 }
