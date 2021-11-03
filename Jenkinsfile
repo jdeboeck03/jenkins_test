@@ -21,6 +21,7 @@ pipeline {
         }
         success {
             echo "This will only run if successful"
+            echo "Also, my name is ${MY_NAME}"
         }
         failure {
             echo "This will only run if failed"
@@ -31,7 +32,6 @@ pipeline {
         changed {
             echo "This will only tun if the state of the Pipeline has changed"
             echo "For example, if te Pipeline was previously failing but is now successfull"
-            echo "Also, my name is ${MY_NAME}"
         }
     }
 }
