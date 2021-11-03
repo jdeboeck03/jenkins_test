@@ -1,4 +1,7 @@
 pipeline {
+    parameters {
+        string( name: 'MY_HOBBY', defaultValue: 'Wall Climbing', description: 'What is your favorite hobby?')
+    }
     environment {
         MY_NAME = 'Jelle'
     }
@@ -12,6 +15,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 echo "Hello, my name is what? My name is whooo? My name is ${MY_NAME}"
+                echo "My favorite hobby is ${MY_HOBBY}!"
             }
         }
     }
