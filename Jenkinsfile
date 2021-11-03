@@ -22,6 +22,7 @@ pipeline {
         success {
             echo "This will only run if successful"
             echo "Also, my name is ${MY_NAME}"
+            echo "Some Jenkins info: build number = ${BUILD_NUMBER} & build url = ${BUILD_URL}"
         }
         failure {
             echo "This will only run if failed"
