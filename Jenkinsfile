@@ -14,8 +14,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                echo "Hello, my name is what? My name is whooo? My name is ${MY_NAME}"
-                echo "My favorite hobby is ${MY_HOBBY}!"
+                echo "Hello, my name is what? My name is whooo? My name is ${env.MY_NAME}"
+                echo "My favorite hobby is ${params.MY_HOBBY}!"
             }
         }
     }
@@ -25,8 +25,8 @@ pipeline {
         }
         success {
             echo "This will only run if successful"
-            echo "Also, my name is ${MY_NAME}"
-            echo "Some Jenkins info: build number = ${BUILD_NUMBER} & build url = ${BUILD_URL}"
+            echo "Also, my name is ${env.MY_NAME}"
+            echo "Some Jenkins info: build number = ${env.BUILD_NUMBER} & build url = ${env.BUILD_URL}"
         }
         failure {
             echo "This will only run if failed"
