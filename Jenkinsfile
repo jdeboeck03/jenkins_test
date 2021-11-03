@@ -11,7 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                echo "Hello, my name is what? My name is who? My name is ${MY_NAME}"
+                echo "Hello, my name is what? My name is whooo? My name is ${MY_NAME}"
             }
         }
     }
