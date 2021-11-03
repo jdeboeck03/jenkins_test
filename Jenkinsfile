@@ -17,20 +17,21 @@ pipeline {
     }
     post{
         always {
-            echo 'This will always run'
+            echo "This will always run"
         }
         success {
-            echo 'This will only run if successful'
+            echo "This will only run if successful"
         }
         failure {
-            echo 'This will only run if failed'
+            echo "This will only run if failed"
         }
         unstable {
-            echo 'This will only run if the run was marked as unstable'
+            echo "This will only run if the run was marked as unstable"
         }
         changed {
-            echo 'This will only tun if the state of the Pipeline has changed'
-            echo 'For example, if te Pipeline was previously failing but is now successfull'
+            echo "This will only tun if the state of the Pipeline has changed"
+            echo "For example, if te Pipeline was previously failing but is now successfull"
+            echo "Also, my name is ${MY_NAME}"
         }
     }
 }
