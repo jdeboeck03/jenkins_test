@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'pytho --version'
                 echo "Hello, my name is what? My name is whooo? My name is ${env.MY_NAME}"
                 echo "My favorite hobby is ${params.MY_HOBBY}!"
                 echo "Your choice is ${params.MAKE_CHOICE}"
