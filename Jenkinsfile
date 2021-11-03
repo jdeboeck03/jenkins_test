@@ -1,6 +1,7 @@
 pipeline {
     parameters {
         string( name: 'MY_HOBBY', defaultValue: 'Wall Climbing', description: 'What is your favorite hobby?')
+        choice( name: 'MAKE_CHOICE', choices: ['ONE', 'TWO', 'THREE', 'FOUR'], description: 'Make a choice!')
     }
     environment {
         MY_NAME = 'Jelle'
@@ -16,6 +17,7 @@ pipeline {
                 sh 'python --version'
                 echo "Hello, my name is what? My name is whooo? My name is ${env.MY_NAME}"
                 echo "My favorite hobby is ${params.MY_HOBBY}!"
+                echo "Your choice is ${params.MAKE_CHOICE}"
             }
         }
     }
